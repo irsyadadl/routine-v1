@@ -9,10 +9,8 @@ export default function Wouter() {
         <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/dashboard" component={Dashboard} />
-
-                <Route path="/components/table" component={Table} />
-                <Route path="/components/panel" component={Panel} />
-
+            <Route path="/components/table" component={Table} />
+            <Route path="/components/panel" component={Panel} />
         </Switch>
     );
 }

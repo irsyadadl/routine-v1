@@ -5,7 +5,7 @@ import ItemLink from './ItemLink';
 
 export default function Sidebar() {
     return (
-        <div className="min-h-screen bg-gray-100 w-full lg:w-1/5 p-4 fixed overflow-y-scroll h-screen tracking-tighter border-r">
+        <div className="min-h-screen bg-gray-100 w-full lg:w-1/5 py-4 px-6 fixed overflow-y-scroll h-screen tracking-tighter border-r">
             <ul className="space-y-4">
                 <ItemLink {...{
                     icon: (
@@ -62,16 +62,16 @@ export default function Sidebar() {
                     ),
                     label: 'Accordion',
                 }}>
-                    <Dropdown.Item href="/">
+                    <Dropdown.Item href="/n">
                         New Item
                     </Dropdown.Item>
-                    <Dropdown.Item href="/">
+                    <Dropdown.Item href="/t">
                         Table of Contents
                     </Dropdown.Item>
-                    <Dropdown.Item href="/">
+                    <Dropdown.Item href="/j">
                         New Journey
                     </Dropdown.Item>
-                    <Dropdown.Item href="/">
+                    <Dropdown.Item href="/d">
                         Discussion
                     </Dropdown.Item>
                 </Dropdown>

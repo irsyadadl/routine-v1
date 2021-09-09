@@ -24,7 +24,7 @@ const Dropdown = ({ icon, label, children }) => {
     return (
         <li>
             <button onClick={dropdown} className="flex items-center justify-between w-full text-left focus:outline-none">
-                <div className="flex items-center gap-x-2 pointer-events-none">
+                <div className="flex items-center gap-x-4 pointer-events-none">
                     {icon && <span className="pointer-events-none">{icon}</span>}
                     {label}
                 </div>
@@ -32,7 +32,7 @@ const Dropdown = ({ icon, label, children }) => {
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                 </svg>
             </button>
-            <ul className="ml-6 space-y-2 py-2 hidden animate-accordion overflow-hidden">
+            <ul className="ml-8 space-y-2 py-2 hidden animate-accordion overflow-hidden">
                 {children}
             </ul>
         </li>
