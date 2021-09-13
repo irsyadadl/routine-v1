@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useRoute } from 'wouter';
+import { Link, useLocation, useRoute } from 'wouter';
 
 const Item = ({ href, children }) => {
     const [isActive] = useRoute(href);
@@ -9,7 +9,9 @@ const Item = ({ href, children }) => {
         </li>
     );
 };
-const Dropdown = ({ icon, label, children }) => {
+const Dropdown = ({ base, icon, label, children }) => {
+    const [location] = useLocation();
+
     const dropdown = (e) => {
         let el = e.target;
         el.getElementsByTagName('svg')[1].classList.add('rotate-90');
@@ -28,11 +30,11 @@ const Dropdown = ({ icon, label, children }) => {
                     {icon && <span className="pointer-events-none">{icon}</span>}
                     {label}
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform pointer-events-none" viewBox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transform pointer-events-none ${location.startsWith(base) ? 'rotate-90' : ''}`} viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                 </svg>
             </button>
-            <ul className="ml-8 space-y-2 py-2 hidden animate-accordion overflow-hidden">
+            <ul className={`ml-8 space-y-2 py-2 animate-accordion overflow-hidden ${!location.startsWith(base) ? 'hidden' : ''}`}>
                 {children}
             </ul>
         </li>
