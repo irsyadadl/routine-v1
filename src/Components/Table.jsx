@@ -10,20 +10,21 @@ function Thead({ children }) {
     );
 }
 
-function Th({ children }) {
+function Th({ className, children, ...props }) {
     return (
         <th
             scope="col"
-            className="px-6 py-3 text-left font-medium tracking-wider"
+            className={`${className ? className : ''} px-4 py-3 text-left font-medium tracking-wider`}
+            {...props}
         >
             {children}
         </th>
     );
 }
 
-function Td({ children }) {
+function Td({ children, ...props }) {
     return (
-        <td className="px-6 py-4 whitespace-nowrap">
+        <td {...props} className="px-4 py-2 whitespace-nowrap">
             {children}
         </td>
     );
@@ -39,14 +40,12 @@ function Tbody({ children }) {
 
 function Table({ children }) {
     return (
-        <div className="flex flex-col text-sm">
-            <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                    <div className="border overflow-hidden sm:rounded-lg">
-                        <table className="min-w-full divide-y divide-gray-200">
-                            {children}
-                        </table>
-                    </div>
+        <div className="overflow-x-auto">
+            <div className="py-2 align-middle inline-block min-w-full text-sm">
+                <div className="border overflow-hidden sm:rounded-lg">
+                    <table className="min-w-full divide-y divide-gray-200">
+                        {children}
+                    </table>
                 </div>
             </div>
         </div>
