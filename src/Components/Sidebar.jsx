@@ -5,8 +5,28 @@ import ItemLink from './ItemLink';
 
 export default function Sidebar() {
     return (
-        <div className="min-h-screen bg-gray-100 w-full lg:w-1/5 py-4 px-6 fixed overflow-y-scroll h-screen tracking-tighter border-r">
-            <ul className="space-y-4">
+        <div className="min-h-screen bg-gray-100 w-full lg:w-1/5 fixed overflow-y-scroll h-screen tracking-tighter border-r">
+            <div className="flex items-center justify-between py-4 px-6 border-b bg-white">
+                <div className="flex items-center gap-x-3">
+                    <div>
+                        <img className="w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60" alt="Person name" />
+                    </div>
+                    <div>
+                        <span className="font-semibold text-sm">
+                            Irsyad A. Panjaitan
+                        </span>
+                        <div className="text-xs text-gray-500">Super Admin</div>
+                    </div>
+                </div>
+                <div>
+                    <button className="focus:outline-none rounded-full border">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 16 16">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <ul className="space-y-4 py-4 px-6 ">
                 <ItemLink {...{
                     icon: (
                         <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-speedometer" viewBox="0 0 16 16">
