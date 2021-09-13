@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import Card from '../../Components/Card';
+import React from 'react';
 import Table from '../../Components/Table';
 import App from '../../Layouts/App';
 import useFetch from '../../Hooks/useFetch';
 export default function Datatable() {
-    const [people, ] = useFetch();
+    const [people, ] = useFetch('https://jsonplaceholder.typicode.com/users');
     return (
         <App>
             <div>
