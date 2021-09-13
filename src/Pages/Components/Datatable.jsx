@@ -4,7 +4,7 @@ import Table from '../../Components/Table';
 import App from '../../Layouts/App';
 import useFetch from '../../Hooks/useFetch';
 export default function Datatable() {
-    const [people, setPeople] = useFetch();
+    const [people, ] = useFetch();
     return (
         <App>
             <div>
