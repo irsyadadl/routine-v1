@@ -44,10 +44,10 @@ export default function Datatable() {
                                     <Table.Td>{person.phone}</Table.Td>
                                     <Table.Td>
                                         <div className="inline-flex items-center gap-x-2">
-                                            <button className="focus:outline-none px-4 py-2 rounded-xl bg-purple-500 hover:bg-purple-600 transition duration-150 font-medium text-sm text-white">
+                                            <button className="focus:outline-none px-3.5 py-1.5 rounded-xl bg-purple-500 hover:bg-purple-600 transition duration-150 font-medium text-sm text-white">
                                                 Edit
                                             </button>
-                                            <button className="focus:outline-none px-4 py-2 rounded-xl bg-rose-500 hover:bg-rose-600 transition duration-150 font-medium text-sm text-white">
+                                            <button className="focus:outline-none px-3.5 py-1.5 rounded-xl bg-rose-500 hover:bg-rose-600 transition duration-150 font-medium text-sm text-white">
                                                 Delete
                                             </button>
                                         </div>
