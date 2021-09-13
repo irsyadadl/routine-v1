@@ -1,30 +1,48 @@
-import React from 'react'
+import React from 'react';
 
-function Header({children}) {
+function Title({ children }) {
+    return (
+        <div className="font-semibold">{children}</div>
+    );
+}
+
+function Subtitle({ children }) {
+    return (
+        <div className="text-xs text-gray-500">
+            {children}
+        </div>
+    );
+}
+
+function Header({ children }) {
     return (
         <div className="border-b px-5 py-4">
             {children}
         </div>
-    )
+    );
 }
 
-function Card({ children }) {
+function Body({ children }) {
     return (
-        <div className="shadow rounded-xl overflow-hidden bg-white">
-            <Header>
-                <div className="font-semibold">Lorem ipsum dolor sit amet.</div>
-                <div className="text-xs text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, esse.
-                </div>
-            </Header>
-            <div className="px-5 py-4">
-                {children}
-            </div>
+        <div className="px-5 py-4">
+            {children}
         </div>
     );
 }
 
 
-Card.Header = Header
+function Card({ children }) {
+    return (
+        <div className="border rounded-xl overflow-hidden bg-white">
+            {children}
+        </div>
+    );
+}
+
+
+Card.Header = Header;
+Card.Body = Body;
+Card.Title = Title;
+Card.Subtitle = Subtitle;
 
 export default Card;
