@@ -1,48 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../../Components/Card';
 import Table from '../../Components/Table';
 import App from '../../Layouts/App';
-
-const people = [
-    {
-        name: 'Jane Cooper',
-        title: 'Regional Paradigm Technician',
-        department: 'Optimization',
-        role: 'Admin',
-        email: 'jane.cooper@example.com',
-        image:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-    },
-    {
-        name: 'Jane Cooper',
-        title: 'Regional Paradigm Technician',
-        department: 'Optimization',
-        role: 'Admin',
-        email: 'jane.cooper@example.com',
-        image:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-    },
-    {
-        name: 'Jane Cooper',
-        title: 'Regional Paradigm Technician',
-        department: 'Optimization',
-        role: 'Admin',
-        email: 'jane.cooper@example.com',
-        image:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-    },
-    {
-        name: 'Jane Cooper',
-        title: 'Regional Paradigm Technician',
-        department: 'Optimization',
-        role: 'Admin',
-        email: 'jane.cooper@example.com',
-        image:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-    },
-    // More people...
-];
+import axios from 'axios';
 export default function Datatable() {
+    const [people, setPeople] = useState([])
+
+    useEffect(() => {
+        const getUsers = async () => {
+            const {data} = await axios.get('https://jsonplaceholder.typicode.com/users')
+            setPeople(data)
+        }
+        getUsers();
+    }, [])
     return (
         <App>
             <Card>
@@ -66,14 +36,7 @@ export default function Datatable() {
                         <Table.Tbody>
                             {people.map((person, index) => (
                                 <tr key={index}>
-                                    <Table.Td>
-                                        <div className="flex items-center gap-x-2">
-                                            <div className="flex-shrink-0">
-                                                <img className="w-8 h-8 rounded-full" src={person.image} alt={person.name} />
-                                            </div>
-                                            {person.name}
-                                        </div>
-                                    </Table.Td>
+                                    <Table.Td> {person.name} </Table.Td>
                                     <Table.Td>{person.title}</Table.Td>
                                     <Table.Td>{person.department}</Table.Td>
                                     <Table.Td>{person.role}</Table.Td>
