@@ -2,17 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Card from '../../Components/Card';
 import Table from '../../Components/Table';
 import App from '../../Layouts/App';
-import axios from 'axios';
+import useFetch from '../../Hooks/useFetch';
 export default function Datatable() {
-    const [people, setPeople] = useState([]);
-
-    useEffect(() => {
-        const getUsers = async () => {
-            const { data } = await axios.get('https://jsonplaceholder.typicode.com/users');
-            setPeople(data);
-        };
-        getUsers();
-    }, []);
+    const [people, setPeople] = useFetch();
     return (
         <App>
             <div>
