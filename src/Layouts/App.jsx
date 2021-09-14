@@ -1,10 +1,8 @@
-import React from 'react'
-
-export default function App({children}) {
-    console.log('app layout');
+import React from 'react';
+export default function App(props) {
     return (
-        <div className="min-h-screen bg-blue-500">
-            {children}
+        <div className="min-h-screen flex items-center justify-center">
+            {props.component}
         </div>
-    )
+    );
 }

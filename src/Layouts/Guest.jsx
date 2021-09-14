@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function Guest(props) {
-    console.log('guest');
     return (
         <div className="bg-red-500 min-h-screen">
             {props.children}
