@@ -10,19 +10,17 @@ import Guest from '../Layouts/Guest';
 import Login from '../Pages/Auth/Login';
 import Register from '../Pages/Auth/Register';
 export default function Wouter() {
-    const [location] = useLocation()
+    const [location] = useLocation();
     return (
         <>
             <Switch>
+                <App>
+                    <Route path="/" component={Home} />
+                </App>
                 <Guest>
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
                 </Guest>
-
-                <App>
-                    <Route path="/" component={Home} />
-                </App>
-
                 <Backend>
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/components/table" component={Datatable} />
