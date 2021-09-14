@@ -1,5 +1,4 @@
 import React from 'react';
-import { Router, useLocation, useRouter } from 'wouter';
 import Sidebar from '../Components/Sidebar';
 export default function Backend(props) {
     return (
