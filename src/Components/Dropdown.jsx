@@ -4,8 +4,8 @@ import { Link, useLocation, useRoute } from 'wouter';
 const Item = ({ href, children }) => {
     const [isActive] = useRoute(href);
     return (
-        <li>
-            <Link className={`${isActive ? 'text-blue-500' : ''}`} href={href}>{children}</Link>
+        <li className="w-full">
+            <Link className={`${isActive ? 'text-blue-500' : ''} block`} href={href}>{children}</Link>
         </li>
     );
 };

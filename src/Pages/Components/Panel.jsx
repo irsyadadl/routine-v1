@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../../Components/Card';
-import App from '../../Layouts/App';
+import App from '../../Layouts/Backend';
 
 export default function Panel() {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from '../../Components/Table';
-import App from '../../Layouts/App';
+import App from '../../Layouts/Backend';
 import useFetch from '../../Hooks/useFetch';
 export default function Datatable() {
     const [people, ] = useFetch('https://jsonplaceholder.typicode.com/users');
