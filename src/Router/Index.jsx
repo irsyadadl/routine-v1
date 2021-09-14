@@ -20,20 +20,16 @@ export default function Wouter() {
                 <App component={<About />} />
             </Route>
 
-            {/* <Route path="/login">
+            <Route path="/login">
                 <Guest component={<Login />} />
             </Route>
             <Route path="/register">
                 <Guest component={<Register />} />
-            </Route> */}
-            <Guest>
-                <Route path="/login" children={() => <Login/>} />
-                <Route path="/register" children={() => <Register/>} />
-            </Guest>
+            </Route>
             <Backend>
-                <Route path="/dashboard" children={() => <Dashboard/>} />
-                <Route path="/components/panel" children={() => <Panel/>} />
-                <Route path="/components/table" children={() => <Datatable/>} />
+                <Route path="/dashboard" component={Dashboard}/>
+                <Route path="/components/panel" component={Panel}/>
+                <Route path="/components/table" component={Datatable}/>
             </Backend>
         </>
     );
