@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocation } from 'wouter';
 import NestedRoutes from '../Router/NestedRoutes';
 import Dropdown from './Dropdown';
 import ItemLink from './ItemLink';
@@ -47,14 +46,12 @@ export default function Sidebar() {
                     ),
                     label: 'Components',
                 }}>
-                    <NestedRoutes base="/components">
-                        <Dropdown.Item href="/panel">
-                            Card
-                        </Dropdown.Item>
-                        <Dropdown.Item href="/table">
-                            Table of Contents
-                        </Dropdown.Item>
-                    </NestedRoutes>
+                <Dropdown.Item href="/components/panel">
+                    Card
+                </Dropdown.Item>
+                <Dropdown.Item href="/components/table">
+                    Table of Contents
+                </Dropdown.Item>
                 </Dropdown>
                 <ItemLink {...{
                     icon: (

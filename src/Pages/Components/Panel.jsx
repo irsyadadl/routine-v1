@@ -4,7 +4,7 @@ import App from '../../Layouts/App';
 
 export default function Panel() {
     return (
-        <App>
+        <>
             <Card>
                 <Card.Header>
                     <div className="font-semibold">Lorem ipsum dolor sit amet.</div>
@@ -20,6 +20,6 @@ export default function Panel() {
                     <p>Eaque velit quaerat ipsa voluptates sapiente? Necessitatibus voluptas culpa rem officiis quis asperiores veniam neque quasi cupiditate consectetur natus esse, ipsa quae qui nobis reprehenderit pariatur harum. Neque, delectus. Sunt.</p>
                 </Card.Body>
             </Card>
-        </App>
+        </>
     );
 }

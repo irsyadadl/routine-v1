@@ -5,7 +5,7 @@ import useFetch from '../../Hooks/useFetch';
 export default function Datatable() {
     const [people, ] = useFetch('https://jsonplaceholder.typicode.com/users');
     return (
-        <App>
+        <>
             <div>
                 <div className="flex items-center justify-between">
                     <div className="ml-2 w-full">
@@ -78,6 +78,6 @@ export default function Datatable() {
                     </Table.Tbody>
                 </Table>
             </div>
-        </App>
+        </>
     );
 }

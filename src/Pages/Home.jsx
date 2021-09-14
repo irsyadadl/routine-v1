@@ -3,7 +3,7 @@ import App from '../Layouts/App';
 
 export default function Home() {
     return (
-        <App>
+        <>
             <p className="mb-10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut laudantium vitae asperiores culpa? Consequatur suscipit aliquam labore aperiam officia doloribus aliquid, error earum dolores provident, quia, nemo officiis quas minus!</p>
             <p className="mb-10">Dicta quisquam fugiat quod? Repellendus, ab quos explicabo totam molestias adipisci accusantium eveniet, esse sit vel voluptates itaque nesciunt corporis modi nihil recusandae non? Sapiente debitis harum deserunt inventore tempora!</p>
             <p className="mb-10">Quis voluptates, soluta alias possimus perferendis voluptatibus inventore adipisci neque enim fugit in nihil corporis harum sint eligendi facilis fuga consequuntur iusto? Odio veniam magnam dicta nostrum praesentium non beatae.</p>
@@ -204,6 +204,6 @@ export default function Home() {
             <p className="mb-10">Officia, cupiditate illo modi ab quam doloremque laudantium! Fugiat dicta perferendis aspernatur consequuntur ratione sequi incidunt ducimus ipsum facilis beatae commodi quo nesciunt voluptates quia dolores porro, voluptatem qui distinctio.</p>
             <p className="mb-10">Dolorum laborum placeat earum aspernatur necessitatibus! Nulla aspernatur soluta voluptates, eligendi consequuntur nisi laboriosam iste illo accusamus ea qui quis veritatis exercitationem sit cumque ipsum molestias magni officiis enim iure.</p>
             <p className="mb-10">Consequuntur eligendi autem sit! Ducimus accusantium veritatis reprehenderit dicta nesciunt, iure quia, tempora itaque non recusandae atque eos repellendus ipsum neque harum dolorum! At, laudantium pariatur esse perferendis quisquam sapiente.</p>
-        </App>
+        </>
     )
 }
