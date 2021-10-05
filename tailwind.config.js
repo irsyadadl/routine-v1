@@ -17,19 +17,6 @@ module.exports = {
             animation: {
                 'accordion': 'accordion 1s'
             },
-
-            keyframes: {
-                'accordion': {
-                    from: {
-                        maxHeight: '0',
-                        animationTimingFunction: 'linear',
-                    },
-                    to: {
-                        maxHeight: '600px',
-                        animationTimingFunction: 'linear',
-                    },
-                }
-            }
         },
     },
     variants: {

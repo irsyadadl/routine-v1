@@ -56,12 +56,12 @@ export default function Sidebar() {
                     label: 'Components',
                 }}>
                     <Router base="/components">
-                    <Dropdown.Item href="/panel">
-                        Card
-                    </Dropdown.Item>
-                    <Dropdown.Item href="/table">
-                        Table of Contents
-                    </Dropdown.Item>
+                        <Dropdown.Item href="/panel">
+                            Card
+                        </Dropdown.Item>
+                        <Dropdown.Item href="/table">
+                            Table of Contents
+                        </Dropdown.Item>
                     </Router>
                 </Dropdown>
 
