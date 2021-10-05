@@ -13,7 +13,7 @@ export default function Sidebar() {
                     </div>
                     <div>
                         <span className="font-semibold text-sm">
-                            Irsyad A. Panjaitan
+                            Sri A. Rahayu
                         </span>
                         <div className="text-xs text-gray-500">Super Admin</div>
                     </div>
