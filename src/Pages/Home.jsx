@@ -13,7 +13,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div>
-                    <Link className="bg-gradient-to-br from-gray-50 to-white hover:from-white border rounded-xl px-4 py-3 inline-flex" href="">Getting Started</Link>
+                    <Link className="shadow bg-white hover:from-white rounded-xl px-5 py-3 inline-flex font-medium" href="">Getting Started</Link>
                 </div>
             </Hero>
             <div className="container mx-auto px-4">

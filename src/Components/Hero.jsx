@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 
 export default function Hero({children}) {
     return (
-        <div className="bg-gray-50 border-b shadow-sm mb-10">
+        <div className="bg-gray-50 border-b mb-10">
             <Navbar />
             <div className="container mx-auto px-4">
                 <div className="w-full lg:w-3/4">
