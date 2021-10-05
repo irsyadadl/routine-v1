@@ -4,7 +4,6 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
     purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
     mode: 'jit',
-    darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
             colors: {
@@ -13,15 +12,12 @@ module.exports = {
             fontFamily: {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],
             },
-
+            fontSize: {
+                tiny: '15px',
+            },
             animation: {
                 'accordion': 'accordion 1s'
             },
-        },
-    },
-    variants: {
-        extend: {
-
         },
     },
     plugins: [

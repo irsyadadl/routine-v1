@@ -5,7 +5,7 @@ import ItemLink from './ItemLink';
 
 export default function Sidebar() {
     return (
-        <div className="min-h-screen bg-gray-100 w-full lg:w-1/5 fixed overflow-y-scroll h-screen tracking-tighter border-r">
+        <div className="scroll min-h-screen bg-gray-100 w-full lg:w-1/5 fixed overflow-y-scroll h-screen tracking-tighter border-r">
             <div className="flex items-center justify-between py-4 px-6 border-b bg-white">
                 <div className="flex items-center gap-x-3">
                     <div>
